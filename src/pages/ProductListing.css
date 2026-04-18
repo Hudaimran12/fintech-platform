@@ -1,0 +1,28 @@
+.pl-toolbar {
+  display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; align-items: center;
+}
+.search-wrap { position: relative; flex: 1; min-width: 200px; }
+.search-icon-pl {
+  position: absolute; left: 0.75rem; top: 50%; transform: translateY(-50%);
+  color: var(--ink3); pointer-events: none; font-size: 1.1rem;
+}
+
+.pl-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.pl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+@media(max-width: 900px) {
+  .pl-layout { grid-template-columns: 1fr; }
+}
+@media(max-width: 480px) {
+  .pl-grid { grid-template-columns: 1fr; }
+}

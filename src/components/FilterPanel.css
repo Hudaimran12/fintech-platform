@@ -1,0 +1,71 @@
+.filter-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  position: sticky;
+  top: 74px;
+  height: fit-content;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.fp-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+.fp-header h3 { font-size: 0.95rem; }
+
+.fp-count {
+  font-size: 0.82rem; color: var(--ink3);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+.fp-count-num { font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--copper); }
+
+.fp-section {
+  margin-bottom: 1.1rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--border);
+}
+.fp-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.fp-label {
+  font-size: 0.72rem; font-weight: 700;
+  color: var(--ink3); text-transform: uppercase;
+  letter-spacing: 0.07em; margin-bottom: 0.65rem;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.fp-range-val { font-family: var(--font-mono); color: var(--copper); font-weight: 600; text-transform: none; letter-spacing: 0; }
+
+/* Risk toggles */
+.fp-risk-group { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+.risk-toggle {
+  display: flex; align-items: center; gap: 0.35rem;
+  padding: 0.35rem 0.75rem; border-radius: 999px;
+  border: 1.5px solid var(--border); background: transparent;
+  font-family: var(--font-body); font-size: 0.78rem; font-weight: 600;
+  color: var(--ink2); cursor: pointer; transition: var(--transition);
+}
+.risk-toggle:hover { border-color: var(--border2); color: var(--ink); }
+.risk-toggle.active { font-weight: 700; }
+.rt-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+
+/* Select group buttons */
+.fp-select-group { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.sel-btn {
+  padding: 0.3rem 0.7rem; border-radius: 7px;
+  border: 1.5px solid var(--border); background: transparent;
+  font-family: var(--font-body); font-size: 0.78rem; font-weight: 500;
+  color: var(--ink2); cursor: pointer; transition: var(--transition);
+}
+.sel-btn:hover { background: var(--bg2); color: var(--ink); }
+.sel-btn.active { background: var(--copper); border-color: var(--copper); color: #fff; font-weight: 700; }
+
+/* Range */
+.range-group { display: flex; flex-direction: column; gap: 0.2rem; }
+
+@media(max-width: 900px){
+  .filter-panel { position: static; max-height: none; }
+}

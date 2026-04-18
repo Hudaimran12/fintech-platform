@@ -1,0 +1,114 @@
+.up-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.up-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.pref-block { padding: 1rem 0; }
+
+.pref-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--ink3);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-family: var(--font-mono);
+  margin-bottom: 0.6rem;
+}
+
+.pref-value-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.pref-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.pref-value {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.2rem;
+}
+
+.pref-desc {
+  font-size: 0.78rem;
+  color: var(--ink3);
+}
+
+/* Risk pips */
+.risk-pips {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  padding-left: 2.15rem;
+}
+
+.risk-pip {
+  width: 28px;
+  height: 6px;
+  border-radius: 999px;
+  transition: background 0.3s ease;
+}
+
+/* Match count */
+.match-count-card {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--copper-bg), transparent);
+  border-color: rgba(181,101,29,0.25) !important;
+}
+
+.mc-number {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--copper);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.mc-label {
+  font-size: 0.9rem;
+  color: var(--ink2);
+  margin-bottom: 1.5rem;
+}
+
+.mc-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Saved banner */
+.profile-saved-banner {
+  background: var(--green-bg);
+  border: 1px solid rgba(45,106,79,0.3);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.25rem;
+  font-size: 0.88rem;
+  color: var(--green);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+@media(max-width: 900px) {
+  .up-layout { grid-template-columns: 1fr; }
+}
