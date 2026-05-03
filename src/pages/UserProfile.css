@@ -1,0 +1,21 @@
+.up-container { padding-bottom: 4rem; }
+.up-header { padding: 2.5rem 0 1.75rem; }
+.up-header h1 { margin-bottom: 0.35rem; }
+.up-layout { display: grid; grid-template-columns: 1fr 300px; gap: 1.5rem; align-items: start; }
+.up-form-wrap {}
+.up-sidebar { position: sticky; top: 80px; }
+
+.profile-summary-card {}
+.ps-row { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); }
+.ps-row:last-of-type { border-bottom: none; }
+.ps-key { font-size: 0.8rem; color: var(--color-text-muted); }
+.ps-val { font-size: 0.875rem; font-weight: 500; }
+
+.match-preview { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; padding: 1rem 0; }
+.match-number { font-size: 2.5rem; font-weight: 800; color: var(--color-primary); }
+.match-label { font-size: 0.8rem; color: var(--color-text-muted); }
+
+@media (max-width: 900px) {
+  .up-layout { grid-template-columns: 1fr; }
+  .up-sidebar { position: static; }
+}
